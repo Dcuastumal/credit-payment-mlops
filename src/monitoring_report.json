@@ -1,0 +1,110 @@
+{
+  "mode": "demostracion_test_historico",
+  "current_file": "monitoring_sample.csv",
+  "n_reference": 6457,
+  "n_current": 2153,
+  "thresholds": "PSI >= 0.1 observar; >= 0.2 revisar. Heurísticas, no pruebas de hipótesis.",
+  "variables": [
+    {
+      "variable": "tipo_credito",
+      "psi": 0.003567154662945451,
+      "estado": "estable",
+      "faltantes_referencia": 0.0,
+      "faltantes_actual": 0.0
+    },
+    {
+      "variable": "capital_prestado",
+      "psi": 0.059636686111292775,
+      "estado": "estable",
+      "faltantes_referencia": 0.0,
+      "faltantes_actual": 0.0
+    },
+    {
+      "variable": "plazo_meses",
+      "psi": 0.3880653334673597,
+      "estado": "revisar",
+      "faltantes_referencia": 0.0,
+      "faltantes_actual": 0.0
+    },
+    {
+      "variable": "edad_cliente",
+      "psi": 0.014853671061309682,
+      "estado": "estable",
+      "faltantes_referencia": 0.009292240978782717,
+      "faltantes_actual": 0.014862981885740827
+    },
+    {
+      "variable": "tipo_laboral",
+      "psi": 0.0007134840960328069,
+      "estado": "estable",
+      "faltantes_referencia": 0.0,
+      "faltantes_actual": 0.0
+    },
+    {
+      "variable": "salario_cliente",
+      "psi": 0.037502627199604746,
+      "estado": "estable",
+      "faltantes_referencia": 0.0017035775127768314,
+      "faltantes_actual": 0.00557361820715281
+    },
+    {
+      "variable": "total_otros_prestamos",
+      "psi": 0.19307656698721093,
+      "estado": "observar",
+      "faltantes_referencia": 0.0,
+      "faltantes_actual": 0.0
+    },
+    {
+      "variable": "cuota_pactada",
+      "psi": 0.09799415707954126,
+      "estado": "estable",
+      "faltantes_referencia": 0.0,
+      "faltantes_actual": 0.0
+    },
+    {
+      "variable": "cuota_ingreso",
+      "psi": 0.11110321338090992,
+      "estado": "observar",
+      "faltantes_referencia": 0.0017035775127768314,
+      "faltantes_actual": 0.00557361820715281
+    },
+    {
+      "variable": "capital_ingreso",
+      "psi": 0.05547714796505155,
+      "estado": "estable",
+      "faltantes_referencia": 0.0017035775127768314,
+      "faltantes_actual": 0.00557361820715281
+    },
+    {
+      "variable": "otros_prestamos_ingreso",
+      "psi": 0.2782588043507156,
+      "estado": "revisar",
+      "faltantes_referencia": 0.0017035775127768314,
+      "faltantes_actual": 0.00557361820715281
+    }
+  ],
+  "performance": {
+    "accuracy": 0.8211797491871807,
+    "precision_riesgo": 0.05113636363636364,
+    "recall_riesgo": 0.2608695652173913,
+    "f1_riesgo": 0.0855106888361045,
+    "f2_riesgo": 0.14331210191082802,
+    "roc_auc": 0.5827352638460039,
+    "average_precision": 0.06139273249721701,
+    "tasa_alertas": 0.1634928007431491,
+    "threshold": 0.53,
+    "confusion_matrix": [
+      [
+        1750,
+        334
+      ],
+      [
+        51,
+        18
+      ]
+    ],
+    "n": 2153,
+    "n_riesgo": 69
+  },
+  "labeled_fraction": 1.0
+}

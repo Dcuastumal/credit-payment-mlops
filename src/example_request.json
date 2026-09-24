@@ -1,0 +1,10 @@
+{
+  "tipo_credito": 4,
+  "capital_prestado": 2000000,
+  "plazo_meses": 12,
+  "edad_cliente": 40,
+  "tipo_laboral": "Empleado",
+  "salario_cliente": 3000000,
+  "total_otros_prestamos": 1000000,
+  "cuota_pactada": 200000
+}
