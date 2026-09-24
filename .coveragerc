@@ -1,0 +1,7 @@
+[run]
+relative_files = True
+source = src
+omit = src/test_project.py
+
+[report]
+show_missing = True

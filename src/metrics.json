@@ -1,0 +1,132 @@
+{
+  "created_utc": "2026-09-21T16:22:51.120806+00:00",
+  "data_sha256": "6a92fc37e83cb6d94413800b966ad4f348433986a48724bba6a91bb6fb0b511e",
+  "python": "3.12.14",
+  "versions": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "positive_class": "riesgo = 1 - Pago_atiempo; interpretación pendiente de diccionario",
+  "features": [
+    "tipo_credito",
+    "capital_prestado",
+    "plazo_meses",
+    "edad_cliente",
+    "tipo_laboral",
+    "salario_cliente",
+    "total_otros_prestamos",
+    "cuota_pactada"
+  ],
+  "seed": 42,
+  "split": {
+    "train": {
+      "n": 6457,
+      "n_riesgo": 350,
+      "start": "2024-11-26 09:17:04",
+      "end": "2025-04-25 17:40:38"
+    },
+    "validation": {
+      "n": 2153,
+      "n_riesgo": 92,
+      "start": "2025-04-25 17:41:12",
+      "end": "2025-07-12 08:34:02"
+    },
+    "test": {
+      "n": 2153,
+      "n_riesgo": 69,
+      "start": "2025-07-12 08:51:24",
+      "end": "2026-04-26 18:43:52"
+    }
+  },
+  "candidates": [
+    {
+      "model": "RegresionLogistica",
+      "cv_average_precision": 0.08221166988553856,
+      "parameters": {
+        "model__C": 0.1
+      }
+    },
+    {
+      "model": "RandomForest",
+      "cv_average_precision": 0.10177384632771265,
+      "parameters": {
+        "model__max_depth": 5,
+        "model__min_samples_leaf": 30
+      }
+    }
+  ],
+  "selected_model": "RandomForest",
+  "selection": "Average precision media en tres folds temporales del entrenamiento",
+  "threshold_selection": "Mayor F2 en validación; sin reajuste posterior del modelo",
+  "validation": {
+    "accuracy": 0.8295401764979099,
+    "precision_riesgo": 0.11484593837535013,
+    "recall_riesgo": 0.44565217391304346,
+    "f1_riesgo": 0.18262806236080179,
+    "f2_riesgo": 0.2827586206896552,
+    "roc_auc": 0.6972607218952386,
+    "average_precision": 0.15396555743394658,
+    "tasa_alertas": 0.1658151416627961,
+    "threshold": 0.53,
+    "confusion_matrix": [
+      [
+        1745,
+        316
+      ],
+      [
+        51,
+        41
+      ]
+    ],
+    "n": 2153,
+    "n_riesgo": 92
+  },
+  "test": {
+    "accuracy": 0.8211797491871807,
+    "precision_riesgo": 0.05113636363636364,
+    "recall_riesgo": 0.2608695652173913,
+    "f1_riesgo": 0.0855106888361045,
+    "f2_riesgo": 0.14331210191082802,
+    "roc_auc": 0.5827352638460039,
+    "average_precision": 0.06139273249721701,
+    "tasa_alertas": 0.1634928007431491,
+    "threshold": 0.53,
+    "confusion_matrix": [
+      [
+        1750,
+        334
+      ],
+      [
+        51,
+        18
+      ]
+    ],
+    "n": 2153,
+    "n_riesgo": 69
+  },
+  "baseline_test": {
+    "accuracy": 0.9679516953088714,
+    "precision_riesgo": 0.0,
+    "recall_riesgo": 0.0,
+    "f1_riesgo": 0.0,
+    "f2_riesgo": 0.0,
+    "roc_auc": 0.5,
+    "average_precision": 0.03204830469112866,
+    "tasa_alertas": 0.0,
+    "threshold": 0.5,
+    "confusion_matrix": [
+      [
+        2084,
+        0
+      ],
+      [
+        69,
+        0
+      ]
+    ],
+    "n": 2153,
+    "n_riesgo": 69
+  }
+}

@@ -1,0 +1,15 @@
+.git
+.venv
+*-venv
+**/__pycache__
+.pytest_cache
+.coverage
+coverage.xml
+.env
+.env.*
+Base_de_datos.xlsx
+Base_de_datos.csv
+src/*.ipynb
+src/reference_data.csv
+src/monitoring_sample.csv
+src/test_predictions.csv
